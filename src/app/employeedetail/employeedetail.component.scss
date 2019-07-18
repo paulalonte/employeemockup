@@ -1,0 +1,95 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+section {
+	background: $lightgray;
+	padding: $gutter;
+
+	.detail-profile {
+
+		margin-bottom: $spacer;
+
+		@include displayFlex();
+
+		a.primary-button {
+		    text-decoration: none;
+		    color: white;
+		    display: inline-block;
+		    padding: 18px 34px;
+		    background: $primary;
+		    transition: background 0.5s ease;
+
+		    &:hover {
+		    	background: darken($primary, 10%);
+		    }
+		}
+
+		.profile-icon {
+			font-size: 6rem;
+			margin-right: 26px;
+		}
+
+		.cta-container {
+			.hearts {
+				margin-top: 10px;
+
+				span {
+					margin-right: 8px;
+					color: $darkgray;
+					transition: color 0.5s ease;
+
+					i.fa-heart {
+						font-size: 1.2rem;
+					}
+
+					&:hover {
+						color: $yellow;
+					}
+
+				}
+
+				.active {
+					color: $yellow;
+				}
+			}
+		}
+	}
+
+	.description {
+		p {
+			color: $darkgray;
+			line-height: 25px;
+			font-weight: 300;
+		}
+	}
+
+	.about {
+		margin-top: $spacer;
+		ul {
+			list-style-type: none;
+			@include displayFlex();
+
+			li {
+				flex-basis: 50%;
+				padding: 8px;
+			}
+
+			&:nth-child(odd) {
+				background: white;
+			}
+
+			&:nth-child(even) {
+				background: $cream;
+			}
+
+			&:first-child {
+				background: $darkgray;
+				color: white;
+			}
+		}
+	}
+}
+
+
+
+

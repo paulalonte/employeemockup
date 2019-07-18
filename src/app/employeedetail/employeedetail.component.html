@@ -1,0 +1,33 @@
+<section *ngIf="employee">
+	<div class="detail-profile">
+		
+		<div>
+			<span><i class="fa fa-user-circle profile-icon"></i></span>	
+		</div>
+		
+		
+		<div class="cta-container">
+			<a href="#" class="primary-button">SEND MESSAGE!</a>
+
+			<div class="hearts">
+				<a href="#" *ngFor="let heart of hearts" (click)="heartClick(heart)"><span><i class="fa fa-heart" [class.active]="index >= heart"></i></span></a>
+			</div>
+				
+		</div>
+		
+
+	</div>
+
+	<div class="description">
+		<p>
+			{{employee.desc}}
+		</p>
+	</div>
+
+	<div class="about">
+		<ul *ngFor="let character of employee.character">
+			<li>{{character.like}}</li>
+			<li>{{character.dislike}}</li>
+		</ul>	
+	</div>
+</section>

@@ -1,0 +1,53 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+header {
+    justify-content: space-between;
+    align-items: center;
+	@include displayFlex();
+	@include alignFlex(center);
+	/*padding: 0 $gutter;*/
+	height: 5rem;
+	border-bottom: 1px solid $lightgray;
+
+	.search-menu {
+		position: relative;
+
+		input {
+			width: 20vw;
+			height: 30px;
+			border-radius: 0;
+			padding: 0 8px 0 28px;
+		}
+
+		.search-icon {
+			position: absolute;
+			left: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $darkgray;
+		}
+	}
+
+	.profile-menu {
+		@include displayFlex();
+		@include alignFlex(center);
+
+		h1 {
+			font-size: 1rem;
+			padding: 0 5px;
+			color: $darkgray;
+
+			span {
+				font-weight: 300;
+			}
+		}
+
+		.profile-icon {
+			font-size: 2rem;
+			padding: 0 5px;
+			color: $darkgray;
+		}
+	}
+}
+

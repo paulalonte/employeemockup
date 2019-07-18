@@ -1,0 +1,26 @@
+@import 'variables';
+
+$barWidth: 8px;
+
+@mixin displayFlex() {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+}
+
+@mixin alignFlex($value) {
+	-webkit-box-align: $value;
+	-ms-flex-align: $value;
+	align-items: $value;
+}
+
+@mixin displayGrid() {
+	display:-ms-grid;
+	display:grid;
+}
+
+@mixin barHighlight() {
+	-webkit-box-shadow: inset $barWidth 0px 0px 0px $primary;
+    -moz-box-shadow: inset $barWidth 0px 0px 0px $primary;
+    box-shadow: inset $barWidth 0px 0px 0px $primary;
+}

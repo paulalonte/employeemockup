@@ -1,0 +1,13 @@
+
+<div class="grid">
+	<section class="employee-list">
+		<ul>
+			<li *ngFor="let employee of employees" role="button" tabindex="0" (click)="onClickEmployee(employee)" [class.selected]="employee == selectedEmployee"><h3>{{employee.name}}</h3></li>
+		</ul>
+	</section>
+
+	<div class="employee-detail">
+		<app-employeedetail [employee]="selectedEmployee"></app-employeedetail>	
+	</div>
+</div>
+	

@@ -1,0 +1,14 @@
+@import '../scss/mixins';
+@import '../scss/variables';
+
+.container {
+	width: 80vw;
+	margin: 0 auto;
+
+	.nav {
+		margin-bottom: $spacer;
+	}
+}
+
+
+
